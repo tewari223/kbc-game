@@ -1,0 +1,403 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bgb{
+    border: 10px solid;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ 
+.hidden {
+    display: none;
+}
+ 
+#welcome-page {
+    background-image: url('kbg1.webp');
+}
+ 
+.welcome-message {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.7);
+    font-family: sans-serif;
+}
+ 
+#game-page {
+    border: 2px solid blue;
+    background-image: url('qbg.jpg_large');
+    flex-direction: row;
+    opacity: 1;
+    height:100%;
+    background-size: cover;
+}
+ 
+.content {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    bottom: 50px;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+  
+button {
+    padding: 10px ;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border-color: grey;
+    box-shadow: 0 0 20px grey;
+    background-color: grey;
+    opacity: 0.8;
+    
+
+}
+ 
+button:hover{
+    background-color: orange;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+
+ 
+.navbar {
+
+    /* margin-top: 20px; */
+    width: 150px;
+
+
+    background:black;
+    color: white;
+    opacity: 1;
+    box-shadow: 0 0 10px black;
+}
+#prizes{
+    height: 100%;
+}
+    
+ 
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.navbar li {
+    padding: 9px;
+    border-bottom: 1px solid white;
+}
+
+.navbar li.active {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+ 
+.game-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+ 
+
+
+.logo{
+
+
+    align-items: center;
+    width: 80%;
+       height: 55px;
+       display: flex;
+       margin-left:64px;
+       margin-top: 20px;
+       justify-content: space-between;
+       gap: 55%;
+    
+   }
+
+
+ 
+   
+   .logo img{
+       height: 60px;
+       width: 60px;
+        /* border-radius:30% ; */
+   }
+   .leftlogo{
+       display: flex;
+       gap: 40px;
+   
+   }
+
+   
+     
+
+   .rightlogo{
+       display: flex;
+       gap: 40px;
+       margin-right: 20px;
+   
+   }
+      
+ 
+.question-container {
+    
+border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    margin-top: 7%;
+    margin-right: 5px;
+    border-radius: 10px;
+    opacity: 0.9;
+    box-shadow: 0 0 5px black;
+}
+ 
+.question-number {
+
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    opacity: 0.8;
+    font-weight: bold;
+}
+ 
+#question{
+
+    border-radius: 25px;
+    border: 3px solid orange;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgb(45, 45, 247);
+    opacity: 0.7;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+ 
+#choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+ 
+#choices button {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: blue;
+    opacity: 0.7;
+    color: white;
+    border: 3px solid orange;
+}
+ 
+#choices button:hover{
+    background-color: orange;
+    transition: 0.6s ease-in-out;
+}
+
+ 
+.score-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+
+.circle {
+  
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+    border: 3px solid orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    background-color: rgb(62, 62, 248);
+  
+}
+
+.circle span {
+
+    font-size: 1em;
+    color:white;
+}
+
+#wrong-answer-message {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#choices button.correct-answer {
+    background-color: green;
+}
+
+
+#choices button.wrong-answer {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+#result-page {
+  
+    background-image: url(./resultimagekbc.avif);
+    opacity: 0.7;
+    color: black;
+    justify-content: center;
+    font-size: larger;
+    background-size: fit;
+    height: 100%;
+    
+}
+/* .content {
+
+} */
+
+.content h1{
+font-family: 'Times New Roman', Times, serif;
+    font-size: 10vh;
+    color: yellow;
+    margin-top: 20%;
+    font-weight: bolder;
+    text-decoration-style: double;
+
+}
+
+.content h2{
+    color: green;
+    font-size: 7vh;
+}
+.content h4{
+    font-size: 4vh;
+    padding: 0;
+    margin: 0;
+    color: yellow;
+}
+.content h3 p{
+font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6vh;
+    font-style: oblique;
+    color: white;
+margin-bottom: 45%;
+}
+
+#prize-amount{
+    color: red;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 2em;
+        right: 20px;
+        padding: 10px;
+    }
+ 
+    .buttons {
+        flex-direction: column;
+    }
+ 
+    .buttons button {
+        margin: 10px 0;
+    }
+ 
+    .navbar {
+        width: 150px;
+    }
+ 
+    #choices button {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+ 
+    .question-number, .score-container {
+        font-size: 1.2em;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .welcome-message {
+        font-size: 1.5em;
+        right: 10px;
+        padding: 5px;
+    }
+ 
+    .buttons button {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+ 
+    .navbar {
+        width: 100px;
+    }
+ 
+    .question-container {
+        padding: 10px;
+    }
+ 
+    .question-number, .score-container {
+        font-size: 1em;
+    }
+ 
+    .question-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+#quit-button{
+
+    padding: 10px ;
+    font-size: 1.2em;
+    border-radius: 10px;
+ 
+    box-shadow: 0 0 20px grey;
+    background-color: orange;
+    opacity: 0.8;
+    width: 10%;
+    color: white;
+    margin-left: 45%
+    
+
+}
+
+#quit-button:hover{
+    background-color: green;
+    transition: 0.4s ease-in-out;
+    /* cursor: pointer; */
+}
+
+/* .display{
+    display: block;
+} */

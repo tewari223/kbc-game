@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Game</title>
+    <link rel="stylesheet" href="kbc.css">
+</head>
+
+<body>
+    <audio src="kbc.mp3" id="sound"></audio>
+    <audio id="correct-audio" src="correct answertune2.mp3" preload="auto"></audio>
+    <audio id="incorrect-audio" src="wrong_answer.mp3" preload="auto"></audio>
+
+    <div id="welcome-page" class="page">
+        <div class="content">
+            <div class="welcome-message">
+                <h1>Welcome To KBC</h1>
+            </div>
+            <div class="buttons">
+                <button id="play-now" onclick="play()">Start Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-page" class="page hidden">
+
+
+        <div class="navbar">
+
+            <ul id="prizes">
+
+                <li>Q15: 1 Crore</li>
+                <li>Q14: 5000000</li>
+                <li>Q13: 2500000</li>
+                <li>Q12: 1250000</li>
+                <li>Q11: 640000</li>
+                <li>Q10: 320000</li>
+                <li>Q9: 160000</li>
+                <li>Q8: 80000</li>
+                <li>Q7: 40000</li>
+                <li>Q6: 20000</li>
+                <li>Q5: 10000</li>
+                <li>Q4: 5000</li>
+                <li>Q3: 3000</li>
+                <li>Q2: 20000</li>
+                <li>Q1: 1000</li>
+            </ul>
+        </div>
+
+        
+
+
+        <div class="game-content ">
+            <div class="logo">
+                <div class="leftlogo">
+                    <img src="./poll1-removebg-preview.png" alt=" ">
+                    <img src="lifelinekbc2-removebg-preview.png" id="lock" alt="" onclick="useLifeline5050()">
+                </div>
+                <div class="rightlogo">
+                    <img src="./lifelinekbc3-removebg-preview.png" alt="">
+                    <img src="./lifelinekbc4-removebg-preview.png" alt="">
+                </div>
+
+
+            </div>
+
+
+            <div class="question-container">
+                <div id="question-number" class="question-number">
+                    <div class="circle">
+                        <span id="timer">30</span>
+                    </div>
+                    <div>Question: 1</div>
+                </div>
+                <div id="wrong-answer-message" class="hidden">Sorry, your answer is wrong.</div>
+                <div id="question">Question text here</div>
+                <div id="choices">
+                    <button onclick="checkAnswer(0)">Choice 1</button>
+                    <button onclick="checkAnswer(1)">Choice 2</button>
+                    <button onclick="checkAnswer(2)">Choice 3</button>
+                    <button onclick="checkAnswer(3)">Choice 4</button>
+                </div>
+                <button id="quit-button" onclick="quitGame()">Quit</button>
+
+            </div>
+
+            <div class="score-container">
+                <span><b>Your Score:</b> <span id="total-score">0</span></span>
+            </div>
+        </div>
+    </div>
+
+     <div id="result-page" class="page hidden" >
+        <div class="content">
+            <h1 id="text">Sorry, your answer is wrong!</h1>
+            <h2>🅶🅰🅼🅴 🅾🆅🅴🆁 ......</h2>
+            <h4> 𝒕𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒑𝒍𝒂𝒚𝒊𝒏𝒈</h4>
+            <h3>
+                <p>You won: <span id="prize-amount">₹0</span></p>
+            </h3>
+            
+        </div>
+    </div> 
+
+
+
+    <script src="kbc.js"></script>
+</body>
+
+</html>
